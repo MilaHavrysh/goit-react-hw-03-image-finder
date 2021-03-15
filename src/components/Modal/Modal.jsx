@@ -8,6 +8,11 @@ const Modal = ({ imgForModal, toggleModal }) => {
       toggleModal();
     }
   });
+  window.addEventListener('click', e => {
+    if (e.target.localName !== 'img') {
+      toggleModal();
+    }
+  });
 
   return (
     <div className={styles.overlay}>

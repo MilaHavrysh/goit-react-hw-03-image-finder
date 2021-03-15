@@ -55,11 +55,12 @@ function App() {
             setImage(res.data.hits);
           } else {
             setImage(prev => [...prev, ...res.data.hits]);
+            window.scrollTo({
+              top: document.documentElement.scrollHeight,
+              behavior: 'smooth',
+            });
           }
-          window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: 'smooth',
-          });
+
           res.data.hits.length > 0
             ? setShowButtonLoad(true)
             : setShowButtonLoad(false);

@@ -16,11 +16,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(100vw - 100px);
+  width: 1500px;
   height: calc(100vh - 50px);
 }
 
 .modal_image {
   width: 100%;
   height: 100%;
+}
+.modal_is-open {
+  overflow: hidden;
+  position: fixed;
 }
